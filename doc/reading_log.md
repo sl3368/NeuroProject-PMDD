@@ -22,3 +22,40 @@ Talking points:
 could this model be improved?
 
 - What other domains could this potentially be applied towards? (Cheminformatics maybe)
+
+
+# 2016-02-02 Mikolov et al., 2013.
+
+I am not convinced that the analogies task (this is the same as word similarity?) is a good metric for measuring 
+how well inferred these word vectors are. Though this may be good for language modelling (predicting whether a 
+combination of words is valid), I think the crux of this problem is inferring semantic definitions of words 
+themselves. Of course this difficult since definitions are dependent on words themselves. That being said, this 
+task takes into account syntax, word tense, and other components which make it difficult to infer real semantic 
+definitions of words.
+
+-I understand the hierarchical softmax mathematically, but does that mean the output of the softmax is a binary 
+vector of size log(N)?
+
+-The idea of negative sampling was thoroughly confusing to me, I do not understand why this can replace the log 
+probability term in the skip gram objective. 
+
+# 2016-02-03 Pennington et. al., 2014.
+
+I liked the explanation of the authors intuition in this paper. It was similar to the first Bengio paper which we read. 
+It pin points that co-occurence is the basis of all information for inference. Adjusting the context 
+for this co-occurence can deeply affect the qaulity of understanding. This makes sense intuitively, if 
+all our minds could only process words with a memory of a few words before and after, it would be difficult 
+to ultimately gain an understanding of low frequency words. 
+
+-I am curious whether increasing the context window to be very large in the skip-gram model (and taking the time 
+to train something that large) would result in a model of similar accuracy to GloVe.
+
+-Essentially, is this a matter of drawing from a different information source, or does the actual difference in 
+objectives cause better embedding performance?
+
+# 2016-02-03 Arora et al., 2015.
+
+This was a novel way of looking at the word embedding task, and it was interesting how the random walk novel 
+was framed in the context of a generative process. Although a lot of the finer details were difficult for me to 
+comprehend, I especially liked how the authors compared this models to the GloVe and Word2Vec models we read 
+about earlier.
