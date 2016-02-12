@@ -73,3 +73,21 @@ using this in conjunction with VAE to work as a flexible image classifier.
 
 -Working on understadning Kingma's code to attempt hashing out this idea, 
 need to work out inference with the CRP.
+
+#2016-02-11
+
+Optimal stimuli seems to have lots of local optima, having difficulty 
+getting this to converge in most situations. This seems to be 
+extremely sensitive to the type of initialization. 
+
+Discussed with collaborators over Skype regarding data and its details,
+should be getting first set soon. More to come as experiments finish 
+and mappings from Allen Institute come back. 
+
+Been reading a lot about Variational Inference and bayesian 
+non-parametrics. I am now familiar with Kingma code/paper, been reading
+the paper on Variational Inference for Dirichlet Process. This is 
+confusing still, will have to ponder further. In theory this should 
+simply be the application of a prior on the categorical distribution 
+but approximation of this prior and approximation of encoding distribution 
+need to be connected somehow. 
