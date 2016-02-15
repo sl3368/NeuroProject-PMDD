@@ -71,7 +71,7 @@ in talks with collaborators, should hopefully have this soon.
 -While reading more about Bayesian non-parametrics, an idea came to me about 
 using this in conjunction with VAE to work as a flexible image classifier. 
 
--Working on understadning Kingma's code to attempt hashing out this idea, 
+-Working on understadning Kingmas code to attempt hashing out this idea, 
 need to work out inference with the CRP.
 
 #2016-02-11
@@ -91,3 +91,17 @@ confusing still, will have to ponder further. In theory this should
 simply be the application of a prior on the categorical distribution 
 but approximation of this prior and approximation of encoding distribution 
 need to be connected somehow. 
+
+#2016-2-15
+
+Had another discussion with collaborators on experiment type and setup, 
+video data with calcium imaging should be here shortly.
+
+Still wrestling with BNP problem, two main points of issue: 
+-how does SSL occur with unlabeled data
+-variational approximation of CNP, or stick breaking. Trying to understand 
+paper on variational inference for dirichlet process.
+
+Question: Formal definition/difference between latent variable and parameters 
+in a distribution? Confused by different models (i.e. PMF and Logistic 
+Regression or GMM) where inference occurs for different hidden values.
