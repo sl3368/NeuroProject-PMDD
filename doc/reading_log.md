@@ -59,3 +59,29 @@ This was a novel way of looking at the word embedding task, and it was interesti
 was framed in the context of a generative process. Although a lot of the finer details were difficult for me to 
 comprehend, I especially liked how the authors compared this models to the GloVe and Word2Vec models we read 
 about earlier.
+
+# 2016-02-18 Arora et al., 2016
+
+This was an interesting paper which aimed to investigate one of the flaws with traditional word vectors: 
+polysemy. The authors describe an experiment in which they combine two random words, and create a new 
+word using the occurrences of these two words in a text. This is a good way of artificially creating 
+these new words. In the experiment, the authors find that " it allows the less dominant/frequent sense 
+to have a superproportionate contribution to vwnew , thus making it detectable in principle despite 
+noise/error". I was not quite sure how to interpret this finding.
+
+-Is this just a result of the model used in the previous paper?
+
+-With all these experiments on language modelling and word vectors, how are the results not highly 
+dependent on the corpus. Although these corpora are sufficiently large, the size of the vocabulary would seem
+prohibitive to making generalizations to all text. 
+
+-
+
+# 2016-02-18 Le et al., 2016
+
+This paper was an extension of the conversation we've been having regarding word vectors. The authors of the paper 
+propose an unsupervised method for learning vector representations of paragraphs. The definition of a paragraph 
+can be of any size (sentence, paragraph, or document). The model the authors propose is a concatenation of both 
+
+# 2016-02-18 Levy et al., 2016
+
