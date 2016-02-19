@@ -66,7 +66,7 @@ This was an interesting paper which aimed to investigate one of the flaws with t
 polysemy. The authors describe an experiment in which they combine two random words, and create a new 
 word using the occurrences of these two words in a text. This is a good way of artificially creating 
 these new words. In the experiment, the authors find that " it allows the less dominant/frequent sense 
-to have a superproportionate contribution to vwnew , thus making it detectable in principle despite 
+to have a superproportionate contribution to v_new , thus making it detectable in principle despite 
 noise/error". I was not quite sure how to interpret this finding.
 
 -Is this just a result of the model used in the previous paper?
@@ -75,13 +75,27 @@ noise/error". I was not quite sure how to interpret this finding.
 dependent on the corpus. Although these corpora are sufficiently large, the size of the vocabulary would seem
 prohibitive to making generalizations to all text. 
 
--
 
 # 2016-02-18 Le et al., 2016
 
 This paper was an extension of the conversation we've been having regarding word vectors. The authors of the paper 
 propose an unsupervised method for learning vector representations of paragraphs. The definition of a paragraph 
-can be of any size (sentence, paragraph, or document). The model the authors propose is a concatenation of both 
+can be of any size (sentence, paragraph, or document). The model the authors propose is a concatenation of a fixed 
+sized context of words (to predict the next word) along with the paragraph vector, which acts a long term memory. 
+The authors seem to keep the word vectors fixed. I liked the distributed bag of words method also discussed. 
+
+-I am curious what would happen if models with recurrence were used for this representation. There has been a lot of 
+work on predicting the sequence of words, and in fact, there was a recent paper this summer that took conversations 
+and was able to perform well in predicting the appropriate response using these aforementioned models. For example 
+what if an LSTM were trained on attempting to predict the next word vector in a paragraph, and the final output 
+vector for this was a paragraph vector?
 
 # 2016-02-18 Levy et al., 2016
 
+I did liked how these authors made a deep theoretical connection between models. It seems in reading different 
+works in the machine learning space, a large portion of the efforts results in proposing a model based on some 
+assumptions and then showing its "state of the art" performance on some known data set. With little discussion 
+on why the model works better, how it theoretically compares to others, and what may be a different theoretical 
+approach that would obtain vastly different results. I  appreciated how this paper made the link between the 
+skip gram negative sampling model and matrix factorization. I did not understand this proof entirely, but it is 
+nice to see the connection between the two models and how they are optimizing the same objective.
