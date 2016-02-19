@@ -105,3 +105,15 @@ paper on variational inference for dirichlet process.
 Question: Formal definition/difference between latent variable and parameters 
 in a distribution? Confused by different models (i.e. PMF and Logistic 
 Regression or GMM) where inference occurs for different hidden values.
+
+#2016-2-19
+
+Working with Liam now on defining variational approximations to deep net 
+models for our data. Need to write this out formally and start building these 
+architectures. Much more comfortable with the variational auto-encoder, 
+and after OH, some of Dirichlet Process. 
+
+Hope to try formulating this idea of connecting BNP and VAE more concretely.
+Reading many different works in this space, V-RNN and V-CNN come to mind as 
+models to try with my idea along with the autoencoder. Created bibtex file 
+with many of the works I have been reading. 
